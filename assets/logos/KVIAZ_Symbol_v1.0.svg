@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   sodipodi:docname="KVIAZ_Symbol_v1.0.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="KVIAZ_Symbol_16.png"
+   inkscape:export-xdpi="3"
+   inkscape:export-ydpi="3"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5216938"
+     inkscape:cx="141.61851"
+     inkscape:cy="257.93626"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1"
+     transform="translate(-1213.1435,-874.85046)">
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke-width:0.287468"
+       id="path1"
+       cx="1469.1436"
+       cy="1130.8505"
+       rx="231.41536"
+       ry="231.16245"
+       inkscape:export-filename="KVIAZ_Symbol_64.png"
+       inkscape:export-xdpi="13.274832"
+       inkscape:export-ydpi="13.274832" />
+    <g
+       id="g2"
+       transform="matrix(0.42419581,0,0,0.43332897,167.09609,259.02115)">
+      <path
+         id="path3"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:1.77656"
+         inkscape:label="Dot"
+         d="m 3198.2862,1642.9241 a 56.17772,58.03645 0 0 1 -56.1777,58.0364 56.17772,58.03645 0 0 1 -56.1777,-58.0364 56.17772,58.03645 0 0 1 56.1777,-58.0365 56.17772,58.03645 0 0 1 56.1777,58.0365 z" />
+      <path
+         id="rect4"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:1.1817"
+         d="m 3097.5693,1735.2814 74.1237,-1.0358 -156.9574,704.7349 -74.1235,-1.5928 z"
+         sodipodi:nodetypes="ccccc"
+         inkscape:label="I" />
+    </g>
+  </g>
+</svg>

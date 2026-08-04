@@ -1,0 +1,27 @@
+{
+  "name": "KVIAZ — A Holding Company",
+  "short_name": "KVIAZ",
+  "description": "KVIAZ creates, acquires, and operates digital businesses across publishing, artificial intelligence, commerce, and media, and holds what it builds.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F6F5F1",
+  "theme_color": "#14161C",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-chrome-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

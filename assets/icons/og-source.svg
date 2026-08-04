@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#14161C"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#39404d" stroke-width="1"/>
+  <text x="90" y="150" font-family="Georgia, 'IBM Plex Mono', serif" font-size="20" letter-spacing="6" fill="#8A8D96">A HOLDING COMPANY</text>
+  <line x1="90" y1="172" x2="150" y2="172" stroke="#97753A" stroke-width="2"/>
+  <text x="88" y="330" font-family="Georgia, serif" font-size="108" fill="#F6F5F1" font-weight="600">KVIAZ</text>
+  <text x="90" y="400" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#c9c5b9">Publishing · Artificial Intelligence</text>
+  <text x="90" y="444" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#c9c5b9">Commerce · Media</text>
+  <text x="90" y="540" font-family="'Courier New', monospace" font-size="18" letter-spacing="2" fill="#5B5F6B">EST. 2016 — NINE COMPANIES — FOUR SECTORS</text>
+</svg>
