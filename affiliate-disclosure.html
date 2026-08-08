@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Affiliate Disclosure — KVIAZ</title>
+<meta name="description" content="How KVIAZ handles affiliate partnerships — full FTC-compliant disclosure, and our commitment to recommendations that are never influenced by commission.">
+<link rel="canonical" href="https://www.kviaz.com/affiliate-disclosure.html">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="KVIAZ">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kviaz.com/affiliate-disclosure.html">
+<meta property="og:title" content="Affiliate Disclosure — KVIAZ">
+<meta property="og:description" content="Transparency first. How affiliate links work across KVIAZ, and why commission never determines a recommendation.">
+<meta property="og:image" content="https://www.kviaz.com/assets/icons/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Affiliate Disclosure — KVIAZ">
+<meta name="twitter:description" content="Transparency first. How affiliate links work across KVIAZ.">
+<meta name="twitter:image" content="https://www.kviaz.com/assets/icons/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* ---- Design tokens, extended from kviaz.com's existing system ---- */
+    --color-bg:        #FFFFFF;
+    --color-ink:        #14130F;   /* primary text, near-black, matches wordmark black */
+    --color-ink-soft:   #5C594F;   /* secondary / supporting text */
+    --color-ink-faint:  #96938A;   /* tertiary, captions, numerals */
+    --color-rule:       #E7E4DC;   /* hairline dividers */
+    --color-invert-bg:  #14130F;   /* footer, matches dark footer on kviaz.com */
+    --color-invert-ink: #FFFFFF;
+    --color-invert-soft:#A9A69C;
+
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --measure: 40rem;        /* editorial reading width */
+    --gutter: clamp(1.5rem, 5vw, 6rem);
+    --section-space: clamp(4rem, 9vw, 7.5rem);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--color-bg);
+    color:var(--color-ink);
+    font-family:var(--font-body);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  a{ color:inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--color-ink); color:var(--color-invert-ink);
+    padding:.75rem 1.25rem; z-index:100;
+  }
+  .skip-link:focus{ left:1rem; top:1rem; }
+
+  img{ max-width:100%; display:block; }
+
+  /* ---------- Header ---------- */
+  header.site{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 1.75rem var(--gutter);
+    border-bottom: 1px solid var(--color-rule);
+  }
+  header.site .wordmark img{ height:20px; width:auto; }
+  header.site nav{ display:flex; gap:2.25rem; }
+  header.site nav a{
+    font-size:.9rem; text-decoration:none; color:var(--color-ink-soft);
+    letter-spacing:.01em;
+    transition:color .15s ease;
+  }
+  header.site nav a:hover{ color:var(--color-ink); }
+  header.site nav a[aria-current="page"]{ color:var(--color-ink); }
+  .nav-toggle{ display:none; }
+
+  @media (max-width:640px){
+    header.site nav{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: clamp(3.5rem, 10vw, 7rem) var(--gutter) clamp(3rem, 8vw, 5rem);
+    max-width: 62rem;
+  }
+  .eyebrow{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--color-ink-faint);
+    margin-bottom:1.25rem;
+    font-weight:500;
+  }
+  .hero h1{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:clamp(2.6rem, 6vw, 4.25rem);
+    line-height:1.05;
+    letter-spacing:-.01em;
+    margin:0 0 1.25rem;
+  }
+  .hero .subtitle{
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:clamp(1.25rem, 2.4vw, 1.6rem);
+    color:var(--color-ink-soft);
+    margin:0 0 1.75rem;
+    font-weight:400;
+  }
+  .hero .lede{
+    max-width:38rem;
+    font-size:1.1rem;
+    color:var(--color-ink-soft);
+    margin:0 0 2.5rem;
+  }
+  .hero .meta{
+    display:inline-flex; align-items:baseline; gap:.5rem;
+    font-size:.85rem; color:var(--color-ink-faint);
+    padding-top:1.75rem;
+    border-top:1px solid var(--color-rule);
+  }
+  .hero .meta strong{
+    color:var(--color-ink-soft); font-weight:500;
+  }
+
+  /* ---------- Body layout ---------- */
+  main{ padding: 0 var(--gutter); }
+
+  .policy{
+    max-width: 62rem;
+    margin: 0 auto;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .policy-section{
+    display:grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: var(--section-space) 0;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .policy-section:last-of-type{ border-bottom:none; }
+
+  .policy-section .index{
+    font-family:var(--font-display);
+    font-size:1.1rem;
+    color:var(--color-ink-faint);
+    padding-top:.2rem;
+  }
+
+  .policy-section .content{ max-width: var(--measure); }
+
+  .policy-section h2{
+    font-family:var(--font-display);
+    font-weight:500;
+    font-size:clamp(1.5rem, 3vw, 1.9rem);
+    letter-spacing:-.005em;
+    margin:0 0 1.25rem;
+  }
+
+  .policy-section h3{
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:.95rem;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    color:var(--color-ink-soft);
+    margin: 2rem 0 .75rem;
+  }
+  .policy-section h3:first-of-type{ margin-top:1.5rem; }
+
+  .policy-section p{
+    margin:0 0 1.1rem;
+    color:var(--color-ink);
+  }
+  .policy-section p.soft{ color:var(--color-ink-soft); }
+
+  .policy-section ul{
+    margin:0 0 1.1rem;
+    padding:0;
+    list-style:none;
+  }
+  .policy-section ul li{
+    position:relative;
+    padding-left:1.4rem;
+    margin-bottom:.6rem;
+    color:var(--color-ink);
+  }
+  .policy-section ul li::before{
+    content:"—";
+    position:absolute; left:0; top:0;
+    color:var(--color-ink-faint);
+  }
+
+  .service-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem 2rem;
+    margin: .5rem 0 1.25rem;
+    padding:0;
+    list-style:none;
+  }
+  .service-grid li{
+    padding: .85rem 0;
+    border-bottom:1px solid var(--color-rule);
+    font-size:.98rem;
+    color:var(--color-ink-soft);
+  }
+  .service-grid li strong{
+    color:var(--color-ink);
+    font-weight:500;
+    display:block;
+    font-size:.9rem;
+    margin-bottom:.15rem;
+  }
+  @media (max-width:640px){
+    .service-grid{ grid-template-columns:1fr; }
+  }
+
+  .callout{
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 1.75rem;
+    border-left: 2px solid var(--color-ink);
+    background: transparent;
+  }
+  .callout p{ margin:0; color:var(--color-ink-soft); font-size:.98rem; }
+  .callout p + p{ margin-top:.75rem; }
+
+  address{ font-style:normal; }
+
+  .contact-block{
+    margin-top:.5rem;
+  }
+  .contact-block dt{
+    font-size:.8rem; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--color-ink-faint); margin-top:1.25rem;
+  }
+  .contact-block dt:first-child{ margin-top:0; }
+  .contact-block dd{
+    margin:.25rem 0 0; font-size:1.05rem; color:var(--color-ink);
+  }
+  .contact-block a{ text-decoration:underline; text-decoration-color:var(--color-rule); text-underline-offset:3px; }
+  .contact-block a:hover{ text-decoration-color:var(--color-ink); }
+
+  @media (max-width:640px){
+    .policy-section{ grid-template-columns:1fr; }
+    .policy-section .index{ padding-top:0; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site{
+    background: var(--color-invert-bg);
+    color: var(--color-invert-soft);
+    margin-top: clamp(4rem,8vw,6rem);
+    padding: clamp(3rem, 7vw, 5rem) var(--gutter) 2.5rem;
+  }
+  footer.site .foot-top{
+    display:flex; flex-wrap:wrap; gap:3rem;
+    justify-content:space-between;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+  footer.site .foot-brand{ max-width:22rem; }
+  footer.site .foot-brand img{ height:18px; margin-bottom:1.25rem; }
+  footer.site .foot-brand p{ font-size:.92rem; line-height:1.6; margin:0; }
+
+  footer.site .foot-cols{ display:flex; gap:4rem; flex-wrap:wrap; }
+  footer.site .foot-col h4{
+    font-size:.75rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--color-invert-soft); margin:0 0 1rem; font-weight:500;
+  }
+  footer.site .foot-col ul{ list-style:none; margin:0; padding:0; }
+  footer.site .foot-col li{ margin-bottom:.6rem; }
+  footer.site .foot-col a{ text-decoration:none; color:var(--color-invert-ink); font-size:.92rem; }
+  footer.site .foot-col a:hover{ color:var(--color-invert-soft); }
+  footer.site address a{ text-decoration:none; color:var(--color-invert-ink); }
+
+  footer.site .foot-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.75rem;
+    padding-top: 2rem; font-size:.82rem; color:var(--color-invert-soft);
+  }
+
+  @media (max-width:640px){
+    footer.site .foot-top{ flex-direction:column; gap:2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <a class="wordmark" href="https://kviaz.com/" aria-label="KVIAZ home">
+    <img src="https://kviaz.com/assets/logos/KVIAZ_Wordmark_Black.svg" alt="KVIAZ">
+  </a>
+  <nav aria-label="Primary">
+    <a href="https://kviaz.com/">Home</a>
+    <a href="https://kviaz.com/about.html">About</a>
+    <a href="https://kviaz.com/companies.html">Companies</a>
+    <a href="https://kviaz.com/journal.html">Journal</a>
+    <a href="https://kviaz.com/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <span class="eyebrow">Legal</span>
+    <h1>Affiliate Disclosure</h1>
+    <p class="subtitle">Transparency first.</p>
+    <p class="lede">Some recommendations on KVIAZ may generate a commission when you make a purchase. Our commitment to honest, independent recommendations never changes.</p>
+    <div class="meta">Last updated <strong>August 8, 2026</strong></div>
+  </section>
+
+  <div class="policy">
+
+    <article class="policy-section" id="why-this-page-exists">
+      <span class="index">01</span>
+      <div class="content">
+        <h2>Why this page exists</h2>
+        <p>Transparency is something we ask of every company in our registry, so we hold kviaz.com to the same standard. This page explains, plainly, how affiliate partnerships fit into how we operate.</p>
+        <p class="soft">Affiliate relationships help support independent publishing — including the reporting and reviews we invest in across the registry. You deserve to know that, and to know it changes nothing about what we recommend.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="how-affiliate-links-work">
+      <span class="index">02</span>
+      <div class="content">
+        <h2>How affiliate links work</h2>
+        <p>Some links on kviaz.com and across our registry are affiliate links. If you click one and make a purchase, the retailer may pay KVIAZ or the relevant company a small commission.</p>
+        <p class="soft">You pay exactly the same price either way. An affiliate link never marks up a product or adds a fee — the commission comes from the retailer's own marketing budget, not your pocket.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="editorial-independence">
+      <span class="index">03</span>
+      <div class="content">
+        <h2>Editorial independence</h2>
+        <p class="soft">This is the part that matters most, so we'll say it directly:</p>
+        <ul>
+          <li>Affiliate commissions never determine rankings</li>
+          <li>Affiliate commissions never influence a recommendation</li>
+          <li>A negative review is published whenever one is deserved</li>
+          <li>Products are evaluated before revenue is ever considered</li>
+          <li>Reader trust comes before affiliate income, every time</li>
+        </ul>
+        <p class="soft">If a product doesn't hold up, we say so — whether or not it pays us to.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="how-products-are-selected">
+      <span class="index">04</span>
+      <div class="content">
+        <h2>How products are selected</h2>
+        <p class="soft">Something earns a place in our coverage because of:</p>
+        <ul>
+          <li>Quality</li>
+          <li>Performance</li>
+          <li>Innovation</li>
+          <li>Customer experience</li>
+          <li>Reliability</li>
+          <li>Value</li>
+          <li>Long-term usefulness</li>
+        </ul>
+        <p class="soft">Never because it pays a higher commission. Two products with identical merit and different payouts get identical treatment.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="affiliate-partners">
+      <span class="index">05</span>
+      <div class="content">
+        <h2>Affiliate partners</h2>
+        <p>KVIAZ currently works, or may work, with a small set of trusted affiliate programs, including Amazon Associates, YesStyle, and Olive Young.</p>
+        <p class="soft">This list evolves as the registry grows — new platforms are added deliberately, and this page is kept current when they are.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="ftc-compliance">
+      <span class="index">06</span>
+      <div class="content">
+        <h2>FTC compliance</h2>
+        <p>KVIAZ follows the Federal Trade Commission's guidelines on affiliate and endorsement disclosures. Where a specific piece of content includes affiliate links, we disclose it clearly, close to where it appears — not just here.</p>
+        <p class="soft">If you ever come across a link you feel wasn't disclosed clearly enough, tell us. We'd rather fix it than argue about it.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="no-sponsored-opinions">
+      <span class="index">07</span>
+      <div class="content">
+        <h2>No sponsored opinions</h2>
+        <p>A company cannot purchase a positive review from us, at any price. Advertising a company may place with us never changes an editorial conclusion.</p>
+        <p class="soft">Where content is sponsored, it's labeled as sponsored, in plain terms, so it's never mistaken for independent coverage.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="our-promise">
+      <span class="index">08</span>
+      <div class="content">
+        <h2>Our promise</h2>
+        <div class="callout">
+          <p>If we recommend it, it's because we'd recommend it to our own family.</p>
+          <p>Trust is worth more than any single commission — we would rather lose the revenue than lose your confidence in what we publish.</p>
+        </div>
+		<h3>The KVIAZ Editorial Promise</h3>
+        <p class="soft">
+            Every recommendation published by KVIAZ follows the same editorial principles,
+            regardless of affiliate relationships or commercial partnerships.
+        </p>
+        <ul>
+            <li>We earn commissions. We never sell recommendations.</li>
+            <li>We compare before we recommend.</li>
+            <li>We disclose every affiliate relationship.</li>
+            <li>We never sell rankings or editorial opinions.</li>
+            <li>We correct mistakes when we find them.</li>
+            <li>We would rather lose revenue than lose your trust.</li>
+        </ul>		  
+        
+      </div>
+    </article>
+
+    <article class="policy-section" id="changes-to-this-disclosure">
+      <span class="index">09</span>
+      <div class="content">
+        <h2>Changes to this Disclosure</h2>
+        <p>Affiliate programs and partnerships evolve, and we'll update this page as they do. When we make a material change, we'll reflect it by updating the "Last updated" date at the top of this page.</p>
+      </div>
+    </article>
+
+    <article class="policy-section" id="contact">
+      <span class="index">10</span>
+      <div class="content">
+        <h2>Contact</h2>
+        <p class="soft">Questions about an affiliate relationship, or a specific piece of content, can go directly to us.</p>
+        <dl class="contact-block">
+          <dt>Company</dt>
+          <dd>KVIAZ Holdings, Inc.</dd>
+          <dt>Website</dt>
+          <dd><a href="https://kviaz.com/">kviaz.com</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:partnerships@kviaz.com">partnerships@kviaz.com</a></dd>
+          <dt>Correspondence</dt>
+          <dd>United States</dd>
+        </dl>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="https://kviaz.com/assets/logos/KVIAZ_Wordmark_White.svg" alt="KVIAZ">
+      <p>A holding company for publishing, artificial intelligence, commerce, and media businesses. Established in 2026.</p>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://kviaz.com/about.html">About</a></li>
+          <li><a href="https://kviaz.com/companies.html">Companies</a></li>
+          <li><a href="https://kviaz.com/journal.html">Journal</a></li>
+          <li><a href="https://kviaz.com/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Registry</h4>
+        <ul>
+          <li><a href="https://kviaz.com/companies.html#publishing">Publishing</a></li>
+          <li><a href="https://kviaz.com/companies.html#artificial-intelligence">Artificial Intelligence</a></li>
+          <li><a href="https://kviaz.com/companies.html#commerce">Commerce</a></li>
+          <li><a href="https://kviaz.com/companies.html#media">Media</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://kviaz.com/privacy.html">Privacy Policy</a></li>
+          <li><a href="https://kviaz.com/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="https://kviaz.com/affiliate-disclosure.html" aria-current="page">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Correspondence</h4>
+        <address>
+          United States<br>
+          <a href="mailto:partnerships@kviaz.com">partnerships@kviaz.com</a>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Last updated August 8, 2026</span>
+    <span>© 2026 KVIAZ Holdings, Inc.</span>
+  </div>
+</footer>
+
+</body>
+</html>
