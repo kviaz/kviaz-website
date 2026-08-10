@@ -1116,3 +1116,8 @@ textarea:focus-visible, select:focus-visible, summary:focus-visible{
   @media (max-width:640px){
     footer.site .foot-top{ flex-direction:column; gap:2.5rem; }
   }
+.registry-child{
+    padding-left:1rem;
+    opacity:.85;
+    font-size:.95em;
+}
