@@ -17,7 +17,6 @@ async function loadInclude(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadInclude("site-header", "/assets/includes/head.html");
     loadInclude("site-header", "/assets/includes/header.html");
     loadInclude("site-footer", "/assets/includes/footer.html");
 });
