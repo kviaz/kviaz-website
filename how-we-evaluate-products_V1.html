@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KVIAZ Beauty | How We Evaluate K-Beauty Products</title>
+<meta name="description" content="Learn how KVIAZ Beauty evaluates K-Beauty products using the KVIAZ Trust Score™, a transparent framework for product quality, evidence, performance, value and purchase confidence.">
+<link rel="canonical" href="https://www.kviazbeauty.com/how-we-evaluate-products.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KVIAZ Beauty">
+<meta property="og:title" content="How We Evaluate Products | The KVIAZ Trust Score™">
+<meta property="og:description" content="A clear framework for evaluating K-Beauty products before we recommend them — what we look at, what the score means, and how we stay independent.">
+<meta property="og:url" content="https://www.kviazbeauty.com/how-we-evaluate-products.html">
+<meta property="og:image" content="https://www.kviazbeauty.com/assets/icons/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How We Evaluate Products | The KVIAZ Trust Score™">
+<meta name="twitter:description" content="A clear framework for evaluating K-Beauty products before we recommend them.">
+<meta name="twitter:image" content="https://www.kviazbeauty.com/assets/icons/og-image.png">
+
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/logos/KVIAZ_Wordmark_Black.svg" as="image" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "How We Evaluate Products",
+  "url": "https://www.kviazbeauty.com/how-we-evaluate-products.html",
+  "description": "KVIAZ Beauty's public explanation of the KVIAZ Trust Score, the editorial framework used to evaluate K-Beauty products.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "KVIAZ Beauty",
+    "url": "https://www.kviazbeauty.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "KVIAZ Beauty"
+  }
+}
+</script>
+
+<!-- Page-specific additions — extends style.css tokens, adds no new colors or fonts -->
+<style>
+  /* Six-up dimension grid (shares .sectors' card/border/hover treatment) */
+  .kts-grid{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 980px){ .kts-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px){ .kts-grid{ grid-template-columns: 1fr; } }
+  .kts-weight{
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    letter-spacing: 0.08em;
+    color: var(--color-gold);
+  }
+
+  /* Score scale (range / verdict pairs) */
+  .scale-list{ border-top: 1px solid var(--color-line); }
+  .scale-list > div{
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: var(--sp-6);
+    align-items: baseline;
+    padding: var(--sp-5) var(--sp-4);
+    margin-inline: calc(var(--sp-4) * -1);
+    border-bottom: 1px solid var(--color-line);
+    transition: background var(--dur-1) var(--ease);
+  }
+  .scale-list > div:hover{ background: var(--color-white); }
+  .scale-list dt{
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--color-graphite);
+  }
+  .scale-list dd{
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--fs-2);
+    color: var(--color-ink);
+  }
+  @media (max-width: 640px){
+    .scale-list > div{ grid-template-columns: 1fr; gap: var(--sp-1); }
+  }
+
+  /* Worked example card */
+  .example-card{
+    border: 1px solid var(--color-line);
+    background: var(--color-paper-dim);
+    padding: var(--sp-8);
+  }
+  .example-card__score{
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-4);
+    margin-top: var(--sp-3);
+  }
+  .example-card__number{
+    font-family: var(--font-mono);
+    font-size: var(--fs-6);
+    color: var(--color-ink);
+  }
+  .example-card__denom{
+    font-family: var(--font-mono);
+    font-size: var(--fs-2);
+    color: var(--color-graphite-2);
+  }
+  .verdict-tag{
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-signal-dark);
+    background: var(--color-signal-soft);
+    border-radius: var(--radius);
+    padding: var(--sp-1) var(--sp-3);
+  }
+  .score-lines{ margin: var(--sp-7) 0 0; border-top: 1px solid var(--color-line-2); }
+  .score-lines > div{
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--sp-3);
+    border-bottom: 1px solid var(--color-line-2);
+    font-size: var(--fs-0);
+  }
+  .score-lines dt{ color: var(--color-graphite); font-weight: 400; }
+  .score-lines dd{ margin: 0; font-family: var(--font-mono); color: var(--color-ink); }
+  .example-card__verdict{ margin-top: var(--sp-7); }
+  .example-card__verdict p{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-2);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+    margin-top: var(--sp-2);
+    max-width: 56ch;
+  }
+  .example-card__lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-7);
+    margin-top: var(--sp-7);
+  }
+  @media (max-width: 640px){ .example-card__lists{ grid-template-columns: 1fr; } }
+  .dash-list li{
+    position: relative;
+    padding-left: var(--sp-5);
+    color: var(--color-ink-soft);
+    font-size: var(--fs-0);
+    margin-top: var(--sp-3);
+  }
+  .dash-list li::before{ content: "—"; position: absolute; left: 0; color: var(--color-graphite-2); }
+  .example-card__note{
+    margin-top: var(--sp-7);
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    color: var(--color-graphite-2);
+  }
+
+  /* Category tag row */
+  .tag-row{ display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-6); }
+  .tag-row span{
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-graphite);
+    border: 1px solid var(--color-line-2);
+    border-radius: var(--radius);
+    padding: var(--sp-2) var(--sp-4);
+  }
+
+  /* "Our Promise" reuses .principles/.principle verbatim — no page-specific
+     CSS needed here. "Deeper Evidence" reuses .section-head + .section-link
+     verbatim — no page-specific CSS needed here either. */
+</style>
+
+</head>
+
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Header -->
+<header id="site-header"></header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero container grid hero-anim">
+    <div style="grid-column: 1 / -1;">
+      <p class="eyebrow hero__eyebrow">The KVIAZ Trust Score™</p>
+    </div>
+    <h1 style="grid-column: span 8;">How we evaluate products.</h1>
+    <div class="hero__sub">
+      <p class="hero__lede">A clear framework for evaluating K-Beauty products before we recommend them. Rigorous behind the score. Simple in front of the buyer.</p>
+      <a class="section-link" style="margin-top: 24px; display:inline-block;" href="#what-it-evaluates">Explore the KTS ↓</a>
+    </div>
+  </section>
+
+  <!-- Fact strip -->
+  <section class="container reveal">
+    <div class="fact-strip tabular">
+      <div class="fact"><span class="fact__value">6</span><span class="fact__label">Dimensions evaluated</span></div>
+      <div class="fact"><span class="fact__value">100</span><span class="fact__label">Point scale</span></div>
+      <div class="fact"><span class="fact__value">2026</span><span class="fact__label">Standard published</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WHY WE CREATED KTS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Why it exists</p>
+          <h2>A score you can actually see the reasoning behind.</h2>
+        </div>
+      </div>
+      <div class="grid reveal">
+        <div style="grid-column: span 6;">
+          <p style="color: var(--color-graphite); max-width: 46ch;">The beauty industry is full of ratings and recommendations, most of them unexplained. A star average doesn't tell you what was tested, what wasn't, or why one product outranked another.</p>
+        </div>
+        <div style="grid-column: span 6;">
+          <p style="color: var(--color-graphite); max-width: 46ch;">The KVIAZ Trust Score™ exists to make that reasoning visible — the same framework behind every product we recommend, so you can see not only what we recommend, but why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT THE KTS EVALUATES ============ -->
+  <section class="section section--dim" id="what-it-evaluates">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">The framework</p>
+          <h2>Six dimensions. One hundred points.</h2>
+        </div>
+      </div>
+      <div class="sectors kts-grid reveal">
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">25 POINTS</span>
+          <div>
+            <h3>Formula</h3>
+            <p>How well the product is formulated for its intended purpose.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">20 POINTS</span>
+          <div>
+            <h3>Evidence</h3>
+            <p>How well the relevant ingredients and claims are supported.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">20 POINTS</span>
+          <div>
+            <h3>Performance</h3>
+            <p>How well the product performs its primary job.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">15 POINTS</span>
+          <div>
+            <h3>Experience</h3>
+            <p>How practical and enjoyable it is to use consistently.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">10 POINTS</span>
+          <div>
+            <h3>Value</h3>
+            <p>Whether the overall experience justifies the price.</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__mark kts-weight">10 POINTS</span>
+          <div>
+            <h3>Purchase Confidence</h3>
+            <p>How confidently you can buy it through a trusted channel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW THE SCORE WORKS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">The scale</p>
+          <h2>One hundred points, two layers.</h2>
+        </div>
+      </div>
+      <div class="fact-strip tabular reveal">
+        <div class="fact"><span class="fact__value">100</span><span class="fact__label">KVIAZ Trust Score™</span></div>
+        <div class="fact"><span class="fact__value">90</span><span class="fact__label">Product Evaluation</span></div>
+        <div class="fact"><span class="fact__value">10</span><span class="fact__label">Purchase Confidence</span></div>
+      </div>
+      <p class="lede reveal" style="font-size: var(--fs-1); max-width: 60ch; margin-top: var(--sp-6);">The final score combines how well the product performs with how safely you can buy it. A great formula means little if the purchase itself is a gamble — so both layers count toward the same number.</p>
+    </div>
+  </section>
+
+  <!-- ============ UNDERSTANDING YOUR SCORE ============ -->
+  <section class="section section--dim">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Reading the score</p>
+          <h2>What the number means.</h2>
+        </div>
+      </div>
+      <dl class="scale-list reveal">
+        <div><dt class="tabular">95–100</dt><dd>Outstanding</dd></div>
+        <div><dt class="tabular">90–94</dt><dd>Exceptional</dd></div>
+        <div><dt class="tabular">85–89</dt><dd>Highly Recommended</dd></div>
+        <div><dt class="tabular">80–84</dt><dd>Recommended</dd></div>
+        <div><dt class="tabular">70–79</dt><dd>Consider</dd></div>
+        <div><dt class="tabular">Below 70</dt><dd>Not Recommended</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ AN EXAMPLE ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">A sample result</p>
+          <h2>What a KTS result looks like.</h2>
+        </div>
+      </div>
+
+      <div class="example-card reveal">
+        <p class="eyebrow">KVIAZ Trust Score™</p>
+        <div class="example-card__score">
+          <span class="example-card__number tabular">92</span>
+          <span class="example-card__denom">/100</span>
+          <span class="verdict-tag">Exceptional</span>
+        </div>
+
+        <dl class="score-lines">
+          <div><dt>Formula</dt><dd class="tabular">23/25</dd></div>
+          <div><dt>Evidence</dt><dd class="tabular">18/20</dd></div>
+          <div><dt>Performance</dt><dd class="tabular">19/20</dd></div>
+          <div><dt>Experience</dt><dd class="tabular">14/15</dd></div>
+          <div><dt>Value</dt><dd class="tabular">9/10</dd></div>
+          <div><dt>Purchase Confidence</dt><dd class="tabular">9/10</dd></div>
+        </dl>
+
+        <div class="example-card__verdict">
+          <p class="eyebrow">KVIAZ Verdict</p>
+          <p>A strong everyday product with a well-designed formula, good usability and strong overall value.</p>
+        </div>
+
+        <div class="example-card__lists">
+          <div>
+            <p class="eyebrow">Why we like it</p>
+            <ul class="dash-list">
+              <li>Strong formulation</li>
+              <li>Good support for key ingredients</li>
+              <li>Easy to use</li>
+              <li>Attractive value</li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Keep in mind</p>
+            <ul class="dash-list">
+              <li>Results vary by skin type</li>
+              <li>Product-specific evidence may be limited</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="example-card__note">This is a sample layout only — not the evaluation of an actual product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVIDENCE WITHOUT THE COMPLEXITY ============ -->
+  <section class="section section--dim">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">How we weigh evidence</p>
+          <h2>Not all evidence is equal.</h2>
+        </div>
+      </div>
+      <div class="grid reveal">
+        <div style="grid-column: span 5;">
+          <p style="color: var(--color-graphite); max-width: 42ch;">KVIAZ considers many kinds of evidence — scientific research, product-specific information, manufacturer documentation, our own structured testing, and real consumer experience. We don't treat them the same way.</p>
+        </div>
+        <div style="grid-column: 7 / -1;">
+          <ul class="dash-list" style="margin-top: 0;">
+            <li>Ingredient evidence doesn't automatically prove a finished product will work the same way.</li>
+            <li>Manufacturer claims are identified as manufacturer claims, not independent evidence.</li>
+            <li>Community reviews can reveal useful patterns — they aren't treated as scientific proof.</li>
+            <li>When evidence is limited, we say so, rather than filling the gap with confidence we don't have.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY-SPECIFIC EVALUATION ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Built by category</p>
+          <h2>The framework stays the same. The criteria adapt.</h2>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="lede" style="font-size: var(--fs-1); max-width: 62ch;">A sunscreen isn't evaluated the same way as a cleanser or a serum. Formula, Evidence, Value and Purchase Confidence apply consistently across every category — but what "good performance" means shifts with what the product is actually for.</p>
+        <div class="tag-row">
+          <span>Cleanser</span>
+          <span>Serum</span>
+          <span>Moisturizer</span>
+          <span>Sunscreen</span>
+          <span>Sheet Mask</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDITORIAL INDEPENDENCE ============ -->
+  <section class="section section--dark">
+    <div class="container grid">
+      <div style="grid-column: 1 / 8;" class="reveal">
+        <p class="pull">"Affiliate relationships never determine a product's KTS score or editorial verdict."</p>
+      </div>
+      <div style="grid-column: 9 / -1; align-self: end;" class="reveal">
+        <p class="eyebrow" style="color: var(--color-graphite-2);">Editorial independence</p>
+        <p style="color: var(--color-graphite-2); font-size: var(--fs-0); line-height: 1.7; margin-top: var(--sp-3);">A product receives the same evaluation whether or not KVIAZ earns a commission from its purchase. Affiliate links are how we fund this work — they are a monetization mechanism, not an evaluation criterion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR PROMISE ============ -->
+  <section class="section section--dim">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Our promise</p>
+          <h2>What you can expect from every score.</h2>
+        </div>
+      </div>
+      <div class="principles reveal">
+        <div class="principle">
+          <span class="principle__index">01</span>
+          <h3 style="grid-column: 2 / 4;">We will tell you what we know.</h3>
+        </div>
+        <div class="principle">
+          <span class="principle__index">02</span>
+          <h3 style="grid-column: 2 / 4;">We will tell you what we don't.</h3>
+        </div>
+        <div class="principle">
+          <span class="principle__index">03</span>
+          <h3 style="grid-column: 2 / 4;">We will distinguish evidence from marketing.</h3>
+        </div>
+        <div class="principle">
+          <span class="principle__index">04</span>
+          <h3 style="grid-column: 2 / 4;">We will disclose meaningful limitations.</h3>
+        </div>
+        <div class="principle">
+          <span class="principle__index">05</span>
+          <h3 style="grid-column: 2 / 4;">We will never change a score to improve affiliate conversion.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEEPER EVIDENCE ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom: 0;">
+        <div>
+          <p class="eyebrow">Go deeper</p>
+          <h2 style="font-size: var(--fs-3);">Want to go deeper?</h2>
+        </div>
+        <a class="section-link" href="/evidence-and-sources.html">View Evidence &amp; Sources →</a>
+      </div>
+      <p class="reveal" style="color: var(--color-graphite); max-width: 56ch; margin-top: var(--sp-5);">Every KTS evaluation is supported by underlying sources and editorial documentation. Readers who want to understand the reasoning behind a score can explore the supporting evidence.</p>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section section--tight section--dim">
+    <div class="container cta-band reveal">
+      <h2>Ready to explore K-Beauty differently?</h2>
+      <div class="cta-band__actions">
+        <a class="btn btn--primary" href="/">Explore KVIAZ Beauty <span class="btn__arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="/assets/js/includes.js"></script>
+
+<script src="/assets/js/main.js" defer></script>
+
+</body>
+
+</html>

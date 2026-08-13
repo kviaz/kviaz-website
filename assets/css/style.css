@@ -1121,3 +1121,138 @@ textarea:focus-visible, select:focus-visible, summary:focus-visible{
     opacity:.85;
     font-size:.95em;
 }
+
+
+
+/* how we evaluate KTS */
+  /* Six-up dimension grid (shares .sectors' card/border/hover treatment) */
+  .kts-grid{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 980px){ .kts-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px){ .kts-grid{ grid-template-columns: 1fr; } }
+  .kts-weight{
+    font-family: var(--font-mono);
+    font-size: var(--fs-00);
+    letter-spacing: 0.08em;
+    color: var(--color-gold);
+  }
+
+  /* Score scale (range / verdict pairs) */
+  .scale-list{ border-top: 1px solid var(--color-line); }
+  .scale-list > div{
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: var(--sp-6);
+    align-items: baseline;
+    padding: var(--sp-5) var(--sp-4);
+    margin-inline: calc(var(--sp-4) * -1);
+    border-bottom: 1px solid var(--color-line);
+    transition: background var(--dur-1) var(--ease);
+  }
+  .scale-list > div:hover{ background: var(--color-white); }
+  .scale-list dt{
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--color-graphite);
+  }
+  .scale-list dd{
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--fs-2);
+    color: var(--color-ink);
+  }
+  @media (max-width: 640px){
+    .scale-list > div{ grid-template-columns: 1fr; gap: var(--sp-1); }
+  }
+
+  /* Worked example card */
+  .example-card{
+    border: 1px solid var(--color-line);
+    background: var(--color-paper-dim);
+    padding: var(--sp-8);
+  }
+  .example-card__score{
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-4);
+    margin-top: var(--sp-3);
+  }
+  .example-card__number{
+    font-family: var(--font-mono);
+    font-size: var(--fs-6);
+    color: var(--color-ink);
+  }
+  .example-card__denom{
+    font-family: var(--font-mono);
+    font-size: var(--fs-2);
+    color: var(--color-graphite-2);
+  }
+  .verdict-tag{
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-signal-dark);
+    background: var(--color-signal-soft);
+    border-radius: var(--radius);
+    padding: var(--sp-1) var(--sp-3);
+  }
+  .score-lines{ margin: var(--sp-7) 0 0; border-top: 1px solid var(--color-line-2); }
+  .score-lines > div{
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--sp-3);
+    border-bottom: 1px solid var(--color-line-2);
+    font-size: var(--fs-0);
+  }
+  .score-lines dt{ color: var(--color-graphite); font-weight: 400; }
+  .score-lines dd{ margin: 0; font-family: var(--font-mono); color: var(--color-ink); }
+  .example-card__verdict{ margin-top: var(--sp-7); }
+  .example-card__verdict p{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--fs-2);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+    margin-top: var(--sp-2);
+    max-width: 56ch;
+  }
+  .example-card__lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-7);
+    margin-top: var(--sp-7);
+  }
+  @media (max-width: 640px){ .example-card__lists{ grid-template-columns: 1fr; } }
+  .dash-list li{
+    position: relative;
+    padding-left: var(--sp-5);
+    color: var(--color-ink-soft);
+    font-size: var(--fs-0);
+    margin-top: var(--sp-3);
+  }
+  .dash-list li::before{ content: "—"; position: absolute; left: 0; color: var(--color-graphite-2); }
+  .example-card__note{
+    margin-top: var(--sp-7);
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    color: var(--color-graphite-2);
+  }
+
+  /* Category tag row */
+  .tag-row{ display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-6); }
+  .tag-row span{
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-graphite);
+    border: 1px solid var(--color-line-2);
+    border-radius: var(--radius);
+    padding: var(--sp-2) var(--sp-4);
+  }
+
+  /* "Our Promise" reuses .principles/.principle verbatim — no page-specific
+     CSS needed here. "Deeper Evidence" reuses .section-head + .section-link
+     verbatim — no page-specific CSS needed here either. */
