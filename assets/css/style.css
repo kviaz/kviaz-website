@@ -1281,3 +1281,90 @@ textarea:focus-visible, select:focus-visible, summary:focus-visible{
     padding: var(--sp-2) var(--sp-4);
   }
   .section--dark .tag-row span{ border-color: rgba(246,245,241,0.3); color: var(--color-graphite-2); }
+  
+  
+  
+  /* Where tu buy*/
+    .dash-list li{
+    position: relative;
+    padding-left: var(--sp-5);
+    color: var(--color-ink-soft);
+    font-size: var(--fs-0);
+    margin-top: var(--sp-3);
+  }
+  .dash-list li:first-child{ margin-top: 0; }
+  .dash-list li::before{ content: "—"; position: absolute; left: 0; color: var(--color-graphite-2); }
+
+  .sectors--three{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 980px){ .sectors--three{ grid-template-columns: 1fr; } }
+
+  /* ---- Comparison table ---- */
+  .kviaz-table-wrap{
+    overflow-x: auto;
+    border: 1px solid var(--color-line);
+    -webkit-overflow-scrolling: touch;
+  }
+  table.kviaz-table{
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+  }
+  .kviaz-table th, .kviaz-table td{
+    text-align: left;
+    padding: var(--sp-5);
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+    font-size: var(--fs-0);
+  }
+  .kviaz-table thead th{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--fs-2);
+    color: var(--color-ink);
+    border-bottom: 2px solid var(--color-ink);
+    background: var(--color-paper-dim);
+  }
+  .kviaz-table thead th:first-child{ background: transparent; border-bottom: 2px solid transparent; }
+  .kviaz-table tbody th{
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-graphite-2);
+    font-weight: 400;
+    white-space: nowrap;
+    width: 1%;
+  }
+  .kviaz-table tbody td{ color: var(--color-graphite); line-height: 1.5; }
+  .kviaz-table tbody tr:last-child th, .kviaz-table tbody tr:last-child td{ border-bottom: none; }
+  .kviaz-table-note{
+    margin-top: var(--sp-3);
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    color: var(--color-graphite-2);
+  }
+
+  /* ---- Restrained disclosure callout (mirrors .form__success's framed-box recipe) ---- */
+  .disclosure-box{
+    border: 1px solid var(--color-line);
+    background: var(--color-paper-dim);
+    padding: var(--sp-7);
+  }
+  .disclosure-box p + p{ margin-top: var(--sp-3); }
+  
+  
+  /* What is K Beauty   */
+    .dash-list li{
+    position: relative;
+    padding-left: var(--sp-5);
+    color: var(--color-ink-soft);
+    font-size: var(--fs-0);
+    margin-top: var(--sp-3);
+  }
+  .dash-list li:first-child{ margin-top: 0; }
+  .dash-list li::before{ content: "—"; position: absolute; left: 0; color: var(--color-graphite-2); }
+
+  /* Three-up variant of .sectors for the "Where to go next" paths */
+  .sectors--three{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 980px){ .sectors--three{ grid-template-columns: 1fr; } }
+  
