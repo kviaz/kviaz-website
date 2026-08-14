@@ -1256,3 +1256,28 @@ textarea:focus-visible, select:focus-visible, summary:focus-visible{
   /* "Our Promise" reuses .principles/.principle verbatim — no page-specific
      CSS needed here. "Deeper Evidence" reuses .section-head + .section-link
      verbatim — no page-specific CSS needed here either. */
+	 
+	 
+/* Wecome page  */	 
+  .dash-list li{
+    position: relative;
+    padding-left: var(--sp-5);
+    color: var(--color-ink-soft);
+    font-size: var(--fs-0);
+    margin-top: var(--sp-3);
+  }
+  .dash-list li:first-child{ margin-top: 0; }
+  .dash-list li::before{ content: "—"; position: absolute; left: 0; color: var(--color-graphite-2); }
+
+  .tag-row{ display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-6); }
+  .tag-row span{
+    font-family: var(--font-mono);
+    font-size: var(--fs-000);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-graphite);
+    border: 1px solid var(--color-line-2);
+    border-radius: var(--radius);
+    padding: var(--sp-2) var(--sp-4);
+  }
+  .section--dark .tag-row span{ border-color: rgba(246,245,241,0.3); color: var(--color-graphite-2); }
